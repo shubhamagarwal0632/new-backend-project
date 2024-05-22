@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <h1 class="flex flex-wrap items-center justify-center w-full h-screen m-auto ">
+        <%userdata.forEach((user)=>{
+            %>
+            
+        <div class="border border-zinc-500 m-2 flex gap-2 flex-col w-[20vw] p-2 rounded">
+        <img class="w-[20vw]" src="<%=user.imageurl%>" alt="">
+        <h1 ><%=user.name%></h1>    
+        <h1><%=user.email%></h1>
+        <a href="/edit/<%=user._id%>">edit</a>
+        <a href="/delete/<%=user._id%>">delete</a>
+        
+    </div>
+        <%
+    }) 
+    %>
+        
+    </h1>
+</body>
+</html>
